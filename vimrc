@@ -86,6 +86,15 @@ nnoremap k gk
 
 
 " ---------------------------------------------------------
+" mapping cut to the black hole register
+" ---------------------------------------------------------
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+
+
+" ---------------------------------------------------------
 " gui options
 " ---------------------------------------------------------
 if has("gui_running")
@@ -111,3 +120,4 @@ autocmd BufWritePre * %s/\s\+$//e
 " Rainbow parenthesis
 " ---------------------------------------------------------
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
