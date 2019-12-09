@@ -1,3 +1,8 @@
+" ---------------------------------------------------------
+"                       NEOVIM Config
+" ---------------------------------------------------------
+"
+" vim-plug{{{
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'davidhalter/jedi-vim'
@@ -15,25 +20,48 @@ Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
+" }}}
+
+set encoding=utf-8
+
+set background=dark
+colorscheme dracula
+hi Comment cterm=italic guifg=#5C6370 ctermfg=59
 
 
+" map leader to space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+set cursorline
+set cursorcolumn
+
+" asynchronous completion framework
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_completion_start_length = 5
 let g:deoplete#max_list = 50
 
+" Spaces & Tabs {{{
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4    " number of spaces to use for autoindent
+set expandtab       " tabs are space
+set autoindent
+set copyindent      " copy indent from the previous line
+" }}} Spaces & Tabs
 
 " enable tab completion
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+
 " close preview window on leaving the insert mode
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-let g:airline_theme = 'base16_spacemacs'
-let g:airline_left_sep  = ''
-let g:airline_right_sep = ''
+
+let g:airline_theme = 'dracula'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
@@ -87,8 +115,46 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-set fillchars+=vert:\│
-hi VertSplit ctermfg=Black ctermbg=DarkGray
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+nnoremap <leader>r :so $NVIMRC<CR>
+
+" ---------------------------------------------------------
+" up and down on physical line (instead of logical)
+" ---------------------------------------------------------
+nnoremap j gj
+nnoremap k gk
+
+
+" ---------------------------------------------------------
+" mapping cut to the black hole register
+" ---------------------------------------------------------
+" nnoremap x "_x
+" nnoremap d "_d
+" nnoremap D "_D
+" vnoremap d "_d
+
+
+set colorcolumn=120
