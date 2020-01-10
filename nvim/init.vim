@@ -20,7 +20,10 @@ Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+" theme
 Plug 'dracula/vim', { 'as': 'dracula' }
+" distraction-free
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 " }}}
@@ -95,8 +98,8 @@ let g:jedi#use_splits_not_buffers = "right"
 let @/ = ""
 set number
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 set hlsearch  " highlight search and search while typing
 set incsearch
@@ -136,7 +139,7 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
 nnoremap <leader>r :so $NVIMRC<CR>
@@ -158,3 +161,7 @@ nnoremap k gk
 
 
 set colorcolumn=120
+
+" switch buffers without saving
+set hidden
+
