@@ -165,3 +165,6 @@ set colorcolumn=120
 " switch buffers without saving
 set hidden
 
+" easy buffers navigation
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
