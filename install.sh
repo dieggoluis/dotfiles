@@ -40,3 +40,6 @@ slack
 zoom
 todoist
 trello
+
+# fonts
+https://github.com/powerline/fonts/tree/master/SourceCodePro

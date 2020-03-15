@@ -22,7 +22,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vimrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshr="source ~/.zshrc"
-# alias vim="nvim"
+alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 # }}}
 
