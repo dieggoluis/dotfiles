@@ -24,3 +24,19 @@ nnn
 
 # dotfiles sync
 stow
+awscli
+gpg
+unzip
+wget
+
+pycharm
+vscore 
+
+google chrome
+last pass/bitwarden/dashlane
+nordvpn
+spotify
+slack
+zoom
+todoist
+trello
