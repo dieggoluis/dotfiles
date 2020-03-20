@@ -36,12 +36,6 @@ setopt HIST_IGNORE_ALL_DUPS
 fpath+=${HOME}/.zsh
 # }}}
 
-autoload bashcompinit && bashcompinit
-source "$NU_HOME/nucli/nu.bashcompletion"
-
-source ${HOME}/.nurc
-# }}}
-
 # added by Anaconda3 2019.07 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
