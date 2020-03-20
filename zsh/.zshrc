@@ -36,12 +36,6 @@ setopt HIST_IGNORE_ALL_DUPS
 fpath+=${HOME}/.zsh
 # }}}
 
-# nubank env variables{{{
-export NU_HOME="${HOME}/dev/nu"
-export NUCLI_HOME="${NU_HOME}/nucli"
-export PATH="${NUCLI_HOME}:${PATH}"
-export SLACK_MEMBER_ID=UE0Q89MHP
-
 autoload bashcompinit && bashcompinit
 source "$NU_HOME/nucli/nu.bashcompletion"
 
@@ -70,6 +64,6 @@ fpath+=${HOME}/.conda-zsh-completion/
 compinit
 # }}}
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_222)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_222)
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
