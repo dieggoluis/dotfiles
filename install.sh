@@ -23,16 +23,23 @@ git config --global user.email "dieggoluis@gmail.com"
 
 # vim
 sudo apt install neovim
+curl -l https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage > /tmp/nvim.appimage
+# curl -l https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
+chmod +x /usr/local/nvim
 
 # zoom
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb
+sudo apt install zoom
 
 # spotify
 sudo apt install curl
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client
+# try just
+sudo apt install spotify-client
 
 # zsh
 sudo apt install zsh
@@ -43,6 +50,7 @@ chsh -s /bin/zsh
 # slack
 # go to https://slack.com/downloads/linux
 sudo apt install ./slack-desktop-*.deb
+sudo apt install slack-desktop
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -59,12 +67,14 @@ git clone git@github.com:esc/conda-zsh-completion.git ${HOME}/.conda-zsh-complet
 #neovim 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# most recent version get app.image
 
+# xfce4 gruvbox theme
 https://github.com/morhetz/gruvbox-contrib/tree/master/xfce4-terminal
 
 # docker 
 https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce
+sudo apt install docker-ce
+sudo apt install docker-ce-cli
 
 # mac specifique
 karabiner
