@@ -6,9 +6,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export PATH="/usr/local/sbin:$PATH"
+
 # langs
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+# gpg
+GPG_TTY=$(tty)
+export GPG_TTY
 
 # editor
 export EDITOR='nvim'

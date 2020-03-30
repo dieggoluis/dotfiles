@@ -23,8 +23,8 @@ git config --global user.email "dieggoluis@gmail.com"
 
 # vim
 sudo apt install neovim
-curl -l https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage > /tmp/nvim.appimage
-# curl -l https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage > /tmp/nvim.appimage
+# curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
 chmod +x /usr/local/nvim
 
