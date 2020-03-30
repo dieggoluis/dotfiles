@@ -54,6 +54,7 @@ set cursorcolumn
 set number
 
 " search engine
+set ignorecase
 set hlsearch
 set incsearch
 set cpoptions+=x
