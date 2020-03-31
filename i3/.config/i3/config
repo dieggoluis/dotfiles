@@ -192,22 +192,14 @@ set $purple #b16286
 set $aqua #689d68
 set $gray #a89984
 set $darkgray #1d2021
+set $orange #d79921
 
 # blue gruvbox
 # class                 border|backgr|text|indicator|child_border
-client.focused          $blue $blue $darkgray $purple $darkgray
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.focused          $orange $orange $darkgray $orange $darkgray
+client.focused_inactive $darkgray $darkgray $yellow $orange $darkgray
+client.unfocused        $darkgray $darkgray $yellow $orange $darkgray
 client.urgent           $red $red $white $red $red
-
-# Theme colors
-# client.focused #b0c4bb #2f2f38 #b0c4bb #81a2be #81a2be
-# client.focused_inactive #b0c4bb #2f2f38 #b0c4bb #688486 #688486
-# client.unfocused #b0c4bb #2f2f38 #b0c4bb #688486 #688486
-# client.urgent #b0c4bb #2f2f38 #b0c4bb #688486 #688486
-# client.placeholder #b0c4bb #2f2f38 #b0c4bb #688486 #688486
-
-# client.background #2f2f38
 
 # Gaps
 gaps inner 10
