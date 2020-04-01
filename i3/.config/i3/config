@@ -19,10 +19,6 @@ bindsym $mod+Return exec i3-sensible-terminal
 # Window kill command
 bindsym $mod+Shift+q kill
 
-# start program launcher
-bindsym $mod+Shift+d exec --no-startup-id rofi -show run
-bindsym $mod+d exec --no-startup-id xfce4-appfinder
-
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -166,7 +162,6 @@ mode "resize" {
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
-# exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # Audio
@@ -177,6 +172,14 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 # touchpad on and off controller on laptop with Fn+<touchpad control functional key>
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
+
+# start program launcher
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id xfce4-appfinder
+
+# autostart redshift
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+exec --no-startup-id redshift-gtk
 
 # Scrot
 bindsym --release $mod+Shift+Control+4 exec scrot -s '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'
@@ -194,8 +197,6 @@ set $gray #a89984
 set $darkgray #1d2021
 set $orange #d79921
 
-# blue gruvbox
-# class                 border|backgr|text|indicator|child_border
 client.focused          $orange $orange $darkgray $orange $darkgray
 client.focused_inactive $darkgray $darkgray $yellow $orange $darkgray
 client.unfocused        $darkgray $darkgray $yellow $orange $darkgray
