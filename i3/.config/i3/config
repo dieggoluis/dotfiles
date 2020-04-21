@@ -181,6 +181,14 @@ bindsym $mod+d exec --no-startup-id xfce4-appfinder
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 
+# Terminal scratchpad
+for_window [class="Xfce4-terminal" title="scratch-terminal"] floating enable
+for_window [class="Xfce4-terminal" title="scratch-terminal"] resize set 800 600
+for_window [class="Xfce4-terminal" title="scratch-terminal"] move to scratchpad
+for_window [class="Xfce4-terminal" title="scratch-terminal"] border pixel 4
+exec xfce4-terminal --title=scratch-terminal
+bindsym $mod+Shift+Return [class="Xfce4-terminal" title="scratch-terminal"] scratchpad show; [class="Xfce4-terminal" title="scratch-terminal"] move position center
+
 # Scrot
 bindsym --release $mod+Shift+Control+4 exec scrot -s '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'
 

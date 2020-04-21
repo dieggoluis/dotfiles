@@ -3,17 +3,17 @@
 " vim-plug{{{
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-Plug 'sbdchd/neoformat'
-Plug 'w0rp/ale'
-Plug 'davidhalter/jedi-vim'
+" Plug 'sbdchd/neoformat'
+" Plug 'w0rp/ale'
+" Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
