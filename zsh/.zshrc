@@ -4,43 +4,48 @@ ZSH_THEME="agnoster"
 plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 
-export PATH="/usr/local/sbin:$PATH"
+# include additional path {
+export PATH="$PATH:/usr/local/sbin:$HOME/.local/bin"
+# }
 
-# langs
+# langs {
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+# }
 
-# gpg
+# gpg {
 GPG_TTY=$(tty)
 export GPG_TTY
+# }
 
-# editor
+# default editor {
 export EDITOR='nvim'
 export NVIMRC=~/.config/nvim/init.vim
+# }
 
-# make faster vi-mode mode switching
+# make faster vi-mode mode switching {
 export KEYTIMEOUT=1
+# }
 
-# aliases{{{
+# aliases {
 alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vimrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshr="source ~/.zshrc"
 alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-# }}}
+# }
 
-# fzf{{{
+# fzf {
 # ignore history duplicates
 setopt HIST_IGNORE_ALL_DUPS
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# }}}
+# }
 
-# completion wrapper for git{{{
+# completion wrapper for git {
 fpath+=${HOME}/.zsh
-# }}}
+# }
 
 # conda autocomplete {{{
 # fpath+=${HOME}/.conda-zsh-completion/
