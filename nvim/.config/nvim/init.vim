@@ -19,7 +19,10 @@ Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim'
+
 Plug 'morhetz/gruvbox'
+" Plug 'joshdick/onedark.vim'
+" Plug 'drewtempelmeyer/gruvbox.vim'
 
 call plug#end()
 " }}}
@@ -29,6 +32,8 @@ set encoding=utf-8
 " theme{{{
 set background=dark
 colorscheme gruvbox
+set termguicolors
+" colorscheme onedark
 " }}}
 
 " basic configs{{{
