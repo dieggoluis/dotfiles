@@ -35,16 +35,18 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshr="source ~/.zshrc"
 alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 # }
 
 # fzf {
 # ignore history duplicates
 setopt HIST_IGNORE_ALL_DUPS
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPS="--extended"
 # }
 
 # completion wrapper for git {
-fpath+=${HOME}/.zsh
+fpath+=$HOME/.zsh/_git
 # }
 
 # conda autocomplete {{{

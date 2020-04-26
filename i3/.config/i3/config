@@ -192,6 +192,9 @@ bindsym $mod+Return [class="Xfce4-terminal" title="scratch-terminal"] scratchpad
 # Scrot
 bindsym --release $mod+Shift+Control+4 exec scrot -s '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'
 
+# i3lock
+bindsym $mod+Shift+l exec i3lock-fancy -f Comic-Sans-MS -- scrot -z
+
 #THEME#
 # set primary gruvbox colorscheme colors
 set $bg #282828
