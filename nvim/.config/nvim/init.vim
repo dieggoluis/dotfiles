@@ -24,6 +24,8 @@ Plug 'morhetz/gruvbox'
 " Plug 'joshdick/onedark.vim'
 " Plug 'drewtempelmeyer/gruvbox.vim'
 
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 " }}}
 
@@ -163,3 +165,7 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 " }}}
+
+" Terraform{{{
+let g:terraform_fmt_on_save=1
+"}}}
