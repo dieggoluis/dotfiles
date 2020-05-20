@@ -3,13 +3,10 @@
 " vim-plug{{{
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-" Plug 'sbdchd/neoformat'
 " Plug 'w0rp/ale'
 " Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
@@ -25,6 +22,12 @@ Plug 'morhetz/gruvbox'
 " Plug 'drewtempelmeyer/gruvbox.vim'
 
 Plug 'hashivim/vim-terraform'
+Plug 'psf/black'
+
+" Use release branch (Recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 " }}}
@@ -169,3 +172,5 @@ let g:NERDToggleCheckAllLines = 1
 " Terraform{{{
 let g:terraform_fmt_on_save=1
 "}}}
+
+" default easymotion <leader><leader>{w, s, f}
