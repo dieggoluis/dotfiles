@@ -1,7 +1,9 @@
-export ZSH="${HOME}/.oh-my-zsh"
+# antigen
+source $HOME/.config/antigen/antigen.zsh
+antigen init $HOME/.antigenrc
 
-ZSH_THEME="agnoster"
-plugins=(vi-mode docker docker-compose)
+# ohmyzsh
+export ZSH="${HOME}/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 
