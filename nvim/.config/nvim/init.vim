@@ -29,6 +29,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'easymotion/vim-easymotion'
 
+Plug 'cespare/vim-toml'
+
 call plug#end()
 " }}}
 
