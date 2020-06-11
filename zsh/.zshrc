@@ -26,14 +26,8 @@ export EDITOR='nvim'
 export NVIMRC=~/.config/nvim/init.vim
 # }
 
-# make faster vi-mode mode switching {
-export KEYTIMEOUT=1
-# }
-
 # aliases {
 alias zshconfig="nvim ~/.zshrc"
-alias vimconfig="nvim ~/.vimrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshr="source ~/.zshrc"
 alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
@@ -50,3 +44,8 @@ export FZF_DEFAULT_OPS="--extended"
 # completion wrapper for git {
 fpath=($HOME/.zsh $fpath)
 # }
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
