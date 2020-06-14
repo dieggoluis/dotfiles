@@ -7,10 +7,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-" Plug 'w0rp/ale'
-" Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
-" Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Plug 'majutsushi/tagbar'
@@ -20,7 +18,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'morhetz/gruvbox'
 " Plug 'joshdick/onedark.vim'
 Plug 'hashivim/vim-terraform'
-Plug 'psf/black'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'cespare/vim-toml'
@@ -150,7 +147,7 @@ nmap <Leader>t :TagbarToggle<CR>
 " }}}
 
 " NERDTree{{{
-nnoremap <Leader>f :NERDTreeToggle<Enter>
+" nnoremap <Leader>f :NERDTreeToggle<Enter>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
@@ -174,3 +171,20 @@ let g:terraform_fmt_on_save=1
 "}}}
 
 " default easymotion <leader><leader>{w, s, f}
+
+" save and execute python code
+nmap <Leader>f :w<CR>:!python %<CR>
+
+" run black format
+nmap <Leader>b :w<CR>:!black %<CR>:e<CR>
+
+" FZF
+nnoremap <C-p> :call FzfOmniFiles()<CR>
+fun! FzfOmniFiles()
+  let is_git = system('git status')
+  if v:shell_error
+    :Files
+  else
+    :GitFiles
+  endif
+endfun
