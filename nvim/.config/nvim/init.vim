@@ -10,26 +10,21 @@ Plug 'scrooloose/nerdcommenter'
 " Plug 'w0rp/ale'
 " Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
-" Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
+" Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim'
-
 Plug 'morhetz/gruvbox'
 " Plug 'joshdick/onedark.vim'
-" Plug 'drewtempelmeyer/gruvbox.vim'
-
 Plug 'hashivim/vim-terraform'
 Plug 'psf/black'
-
-" Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'easymotion/vim-easymotion'
-
 Plug 'cespare/vim-toml'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 " }}}
