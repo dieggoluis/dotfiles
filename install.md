@@ -21,12 +21,18 @@ git config --global user.signingkey <key>
 git config --global user.name "Diego de Souza"
 git config --global user.email "dieggoluis@gmail.com"
 
-# vim
+# neovim
+## from package manager
 sudo apt install neovim
+##nightly version
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage > /tmp/nvim.appimage
-# curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
 chmod +x /usr/local/nvim
+## Install plug manager
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+## install nodejs, requirement for coc plugin
+sudo apt install nodejs
 
 # zoom
 wget https://zoom.us/client/latest/zoom_amd64.deb
@@ -61,34 +67,27 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash ./Anaconda3-2020.02-Linux-x86_64.sh
 git clone git@github.com:esc/conda-zsh-completion.git ${HOME}/.conda-zsh-completion
 
-# pycharm 
-# go to https://www.jetbrains.com/pycharm/download/#section=linux
-
-#neovim 
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# xfce4 gruvbox theme
-https://github.com/morhetz/gruvbox-contrib/tree/master/xfce4-terminal
-
 # docker 
 https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce
 sudo apt install docker-ce
 sudo apt install docker-ce-cli
 
+# qmk_firmware for flash keyboards
+https://github.com/qmk/qmk_firmware
+
+# file managers
+sudo apt install vifm
+
+# vpn
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+nordvpn login
+
+# antigen
+stow antigen
+
 # mac specifique
 karabiner
 iterm2
 
-# qmk_firmware for flash keyboards
-
-# file managers
-ranger
-vifm
-nnn
-
-# vpn
-nordvpn
-
-# fonts
-https://github.com/powerline/fonts/tree/master/SourceCodePro
+# pyenv
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash

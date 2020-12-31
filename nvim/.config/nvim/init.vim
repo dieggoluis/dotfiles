@@ -7,21 +7,18 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim'
-Plug 'morhetz/gruvbox'
-" Plug 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'cespare/vim-toml'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 " }}}
@@ -30,9 +27,8 @@ set encoding=utf-8
 
 " theme{{{
 set background=dark
-colorscheme gruvbox
 set termguicolors
-" colorscheme onedark
+colorscheme onedark
 " }}}
 
 " basic configs{{{
@@ -107,7 +103,7 @@ let g:deoplete#max_list = 50
 "}}}
 
 " airline{{{
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1

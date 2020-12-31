@@ -31,7 +31,6 @@ alias zshconfig="nvim ~/.zshrc"
 alias zshr="source ~/.zshrc"
 alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 # }
 
 # fzf {
@@ -49,3 +48,11 @@ fpath=($HOME/.zsh $fpath)
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+pya() {
+    pyenv activate $1
+}
+
+pyd() {
+    pyenv deactivate
+}
