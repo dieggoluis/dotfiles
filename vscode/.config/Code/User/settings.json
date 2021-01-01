@@ -1,0 +1,44 @@
+{
+    "workbench.colorTheme": "Atom One Dark",
+    "window.zoomLevel": 0,
+    "python.languageServer": "Pylance",
+    "vim.easymotion": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.textColor": "#66f0ff",
+    "vim.leader": " ",
+    "vim.handleKeys": {
+        "<C-w>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["<leader>", "w"],
+          "commands": ["workbench.action.files.save"]
+        },
+        {
+          "before": ["<leader>", "t"],
+          "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+          "before": ["<leader>", "f"],
+          "commands": [ "revealInExplorer" ],
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ]
+}

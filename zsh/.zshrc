@@ -2,6 +2,9 @@
 source $HOME/.config/antigen/antigen.zsh
 antigen init $HOME/.antigenrc
 
+# vi-mode plugin must be after antigen
+plugins=(vi-mode)
+
 # ohmyzsh
 export ZSH="${HOME}/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
