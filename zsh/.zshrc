@@ -1,17 +1,31 @@
 # antigen
 source $HOME/.config/antigen/antigen.zsh
-antigen init $HOME/.antigenrc
 
-# vi-mode plugin must be after antigen
-plugins=(vi-mode)
+# Load oh-my-zsh library.
+antigen use oh-my-zsh
 
-# ohmyzsh
-export ZSH="${HOME}/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
+# Load bundles from the default repo (oh-my-zsh).
+antigen bundle git
+antigen bundle vi-mode
+antigen bundle command-not-found
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle poetry
 
+# Load bundles from external repos.
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Select theme.
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
+# Tell Antigen that you're done.
+antigen apply
 
 # include additional path {
-export PATH="$PATH:/usr/local/sbin:$HOME/.local/bin"
+export PATH="$PATH:/usr/local/sbin:$HOME/.local/bin:/usr/local/go/bin:$HOME/go/bin"
 # }
 
 # langs {
@@ -31,9 +45,11 @@ export NVIMRC=~/.config/nvim/init.vim
 
 # aliases {
 alias zshconfig="nvim ~/.zshrc"
+alias vimconfig="nvim ~/.config/nvim/init.vim"
 alias zshr="source ~/.zshrc"
 alias vim="nvim"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias rm='rm -i'
 # }
 
 # fzf {
@@ -43,12 +59,17 @@ setopt HIST_IGNORE_ALL_DUPS
 export FZF_DEFAULT_OPS="--extended"
 # }
 
+# Tilix terminal emulator
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 # completion wrapper for git {
-fpath=($HOME/.zsh $fpath)
+# fpath=($HOME/.zsh $fpath)
 # }
 
 # pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="${HOME}/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -59,3 +80,14 @@ pya() {
 pyd() {
     pyenv deactivate
 }
+
+# linux only
+xcape -e 'Control_L=Escape'
+
+source $HOME/.gitlab
+source $HOME/.github
+source $HOME/.nexus
+source $HOME/.packagecloud
+
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
