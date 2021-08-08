@@ -1,3 +1,7 @@
+[user]
+        email = <foo@bar.com>
+        name = foo.bar
+        signingkey = <signing_key>
 [core]
     	editor = nvim
     	excludesfile = ~/.gitignore
@@ -38,3 +42,10 @@
 	f = "!git ls-files | grep -i"
 	gr = grep -Ii
 	la = "!git config -l | grep alias | cut -c 7-"
+[credential]
+        helper = cache
+[filter "lfs"]
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
