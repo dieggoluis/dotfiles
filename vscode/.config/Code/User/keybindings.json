@@ -52,11 +52,6 @@
     },
     {
       "key": "tab",
-      "command": "selectNextSuggestion",
-      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    },
-    {
-      "key": "tab",
       "command": "workbench.action.quickOpenNavigateNext",
       "when": "inQuickOpen"
     },
@@ -176,6 +171,15 @@
       "key": "tab", 
       "command": "-calva-fmt.formatCurrentForm"
     },
+    {
+      "key": "shift+tab", 
+      "command": "-calva-fmt.inferParens"
+    },
+	{
+		"command": "calva.evaluateCurrentTopLevelForm",
+		"key": "shift+enter",
+		"when": "calva:keybindingsEnabled && editorTextFocus"
+	},
     {
       "key": "space",
       "command": "whichkey.show",
