@@ -11,6 +11,10 @@
 (let [options
       {:encoding "utf-8"
        :spelllang "en_us"
+       ;tab/indent size
+       :tabstop 2
+       :shiftwidth 2
+       :softtabstop 2
        ;settings needed for compe autocompletion
        :completeopt "menuone,noselect"
        ;case insensitive search
