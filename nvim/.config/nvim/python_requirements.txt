@@ -1,5 +1,0 @@
-isort
-pynvim
-jedi
-flake8
-autopep8
