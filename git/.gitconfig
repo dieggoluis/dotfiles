@@ -10,44 +10,28 @@
 	excludesfile = ~/.gitignore
 [alias]
 	co = checkout
-	cob = checkout -b
-	coo = !git fetch && git checkout
-	br = branch
-	brd = branch -d
-	brD = branch -D
-	st = status
-	aa = add -A .
-    	cm = commit -S -m
-	ci = commit -S
-	amend = commit --amend -m
-	dev = !git checkout dev && git pull origin dev
-	staging = !git checkout staging && git pull origin staging
-	master = !git checkout master && git pull origin
-	po = push origin
-	pod = push origin dev
-	pos = push origin staging
-	pom = push origin master
-	poh = push origin HEAD
-	plo = pull origin
-	plod = pull origin dev
-	plos = pull origin staging
-	plom = pull origin master
-	ploh = pull origin HEAD
-	unstage = reset --soft HEAD^
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	la = "!git config -l | grep alias | cut -c 7-"
-	f = "!git ls-files | grep -i"
-	gr = grep -Ii
+  cob = checkout -b
+  br = branch
+  cm = commit -S -m
+  ci = commit
+  st = status
+  pl = pull
+  ps = push
+  aa = add -A
+  amend = commit --amend -m
+  upd = ! git pull && git submodule update --recursive
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  la = "!git config -l | grep alias | cut -c 7-"
 # config for delta https://github.com/dandavison/delta
 [core]
-    	pager = delta
+  pager = delta
 [interactive]
-    	diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [delta]
-    	navigate = true  # use n and N to move between diff sections
+  navigate = true  # use n and N to move between diff sections
 [merge]
-    	conflictstyle = diff3
+  conflictstyle = diff3
 [diff]
-    	colorMoved = default
+  colorMoved = default
 
