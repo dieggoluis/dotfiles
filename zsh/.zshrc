@@ -81,7 +81,6 @@ _gen_fzf_default_opts() {
 }
 _gen_fzf_default_opts
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 setopt HIST_IGNORE_ALL_DUPS
 if type rg &> /dev/null; then
