@@ -36,3 +36,6 @@ Icon?
 Thumbs.db
 
 *.lock
+
+.vscode
+.metals
