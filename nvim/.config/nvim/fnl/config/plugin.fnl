@@ -67,8 +67,8 @@
   :christoomey/vim-tmux-navigator {}
 
   ;; file exploration
-  :preservim/nerdtree {:mod :nerdtree}
-  :Xuyuanp/nerdtree-git-plugin {}
+  :kyazdani42/nvim-tree.lua {:mod :nvim-tree
+                             :requires [:kyazdani42/nvim-web-devicons]}
 
   ;; commeting code
   :preservim/nerdcommenter {:mod :nerdcommenter}
@@ -80,8 +80,7 @@
   :machakann/vim-highlightedyank {:mod :highlightedyank}
 
   ;; git integration
-  :airblade/vim-gitgutter {}
-  :tpope/vim-fugitive {}
+  :lewis6991/gitsigns.nvim {:mod :gitsigns}
   :tpope/vim-rhubarb {}
 
   ;; autocomplete
