@@ -82,6 +82,15 @@
   ;; git integration
   :lewis6991/gitsigns.nvim {:mod :gitsigns}
   :tpope/vim-rhubarb {}
+  :tpope/vim-fugitive {}
+
+  ;; bufferline
+  :akinsho/bufferline.nvim {:requires [:kyazdani42/nvim-web-devicons]
+                            :tag "v2.*"
+                            :mod :bufferline}
+
+  ;; avoid messing up with layout when closing buffers
+  :moll/vim-bbye {:mod :bbye}
 
   ;; autocomplete
   :hrsh7th/nvim-cmp {:requires [:hrsh7th/cmp-buffer
