@@ -28,14 +28,16 @@
 ######################
 *.log
 
-# OS generated files #
+# OS files #
 ######################
 .DS_Store*
 ehthumbs.db
 Icon?
 Thumbs.db
-
 *.lock
+.java-version
 
+# Editors and frameworks #
+######################
 .vscode
 .metals
