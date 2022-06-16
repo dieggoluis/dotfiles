@@ -25,3 +25,6 @@
 (noremap :n :<leader>- ":resize -5<CR>")
 (noremap :n :<leader>> ":vertical resize +5<CR>")
 (noremap :n :<leader>< ":vertical resize -5<CR>")
+
+;; save
+(noremap :n :<leader>w ":w<CR>")
