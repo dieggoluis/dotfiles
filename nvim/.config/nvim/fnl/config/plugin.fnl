@@ -92,6 +92,10 @@
   ;; avoid messing up with layout when closing buffers
   :moll/vim-bbye {:mod :bbye}
 
+  ;; color for clojure repl
+  ;:m00qek/baleia.nvim {:requires [:Olical/conjure]
+                       ;:mod :baleia}
+
   ;; autocomplete
   :hrsh7th/nvim-cmp {:requires [:hrsh7th/cmp-buffer
                                 :hrsh7th/cmp-nvim-lsp

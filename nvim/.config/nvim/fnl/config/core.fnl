@@ -2,8 +2,6 @@
   {autoload {nvim aniseed.nvim
              util config.util}})
 
-; theme
-
 ;don't wrap lines
 (nvim.ex.set :nowrap)
 
@@ -28,7 +26,13 @@
        ;show relative line number
        :relativenumber true
        ;show line number
-       :number true}]
+       :number true
+       ;tabs is space
+       :expandtab true
+       ;tab/indent size
+       :tabstop 2
+       :shiftwidth 2
+       :softtabstop 2}]
   (each [option value (pairs options)]
     (util.set-global-option option value)))
 
