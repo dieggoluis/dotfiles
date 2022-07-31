@@ -69,7 +69,8 @@ return packer.startup(function(use)
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
-      "PaterJason/cmp-conjure"
+      "PaterJason/cmp-conjure",
+      "saadparwaiz1/cmp_luasnip"
     }
   }
 
@@ -116,10 +117,6 @@ return packer.startup(function(use)
     }
   }
 
-  -- LSP
-  use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
-
   -- Lualine
   use {
     "nvim-lualine/lualine.nvim",
@@ -129,11 +126,18 @@ return packer.startup(function(use)
     end
   }
 
+  -- LSP
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
+
   -- Clojure repl tools
   use "Olical/conjure"
 
   -- Colorize text with ANSI escape sequences
   use "m00qek/baleia.nvim"
+
+  -- Snippet engine
+  use "L3MON4D3/LuaSnip"
 
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
