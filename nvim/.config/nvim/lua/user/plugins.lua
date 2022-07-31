@@ -80,7 +80,12 @@ return packer.startup(function(use)
   use "machakann/vim-highlightedyank"
 
   -- Git integration
-  use "lewis6991/gitsigns.nvim"
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end
+  }
   use "tpope/vim-rhubarb"
   use "tpope/vim-fugitive"
 
@@ -111,15 +116,17 @@ return packer.startup(function(use)
     }
   }
 
-  -- TODO config for clojure
+  -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
 
   -- Lualine
-  -- TODO indicate when LSP is running
   use {
     "nvim-lualine/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true }
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    config = function()
+      require("lualine").setup()
+    end
   }
 
   -- Clojure repl tools
