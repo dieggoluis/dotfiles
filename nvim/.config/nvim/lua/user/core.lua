@@ -18,6 +18,7 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
+vim.opt.signcolumn = "yes"
 vim.opt.completeopt = { "menuone", "noselect" }
 
 -- Remap space as leader key
