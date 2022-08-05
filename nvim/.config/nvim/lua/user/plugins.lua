@@ -42,7 +42,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
 
   -- Colorscheme
-  use "ishan9299/nvim-solarized-lua"
+  use "folke/tokyonight.nvim"
   use "lunarvim/colorschemes"
 
   -- Easy navigation between vim and tmux
