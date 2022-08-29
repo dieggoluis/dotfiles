@@ -11,11 +11,13 @@
 [alias]
 	co = checkout
   cob = checkout -b
-  br = branch
+  bd = branch -D
   cm = commit -S -m
+  cs = commit -S
   ci = commit
   st = status
-  pl = pull
+  pmaster = pull origin master
+  pmain = pull origin main
   ps = push
   aa = add -A
   amend = commit --amend -m
@@ -34,3 +36,7 @@
   conflictstyle = diff3
 [diff]
   colorMoved = default
+[include]
+	path = ~/.workgitconfig
+[push]
+	default = current
