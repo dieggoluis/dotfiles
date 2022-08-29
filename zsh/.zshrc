@@ -111,5 +111,8 @@ jenv() {
   esac
 }
 
+# Clojure repl
+export LEIN_USE_BOOTCLASSPATH=no
+
 # work specific configs
 [ -f $HOME/.workrc ] && source $HOME/.workrc
