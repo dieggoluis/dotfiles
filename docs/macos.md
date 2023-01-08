@@ -1,6 +1,16 @@
 # [WIP] MacOS Setup
 
-## Stow
+## Terminal
+```
+brew cask install iterm2
+```
+
+## Keyboard remapping
+```
+brew install --cask karabiner-elements
+```
+
+## Sync config files
 ```
 brew install stow
 ```
@@ -8,9 +18,7 @@ brew install stow
 ## GPG key
 ```
 brew install gnupg
-```
-### Generate gpg keys
-```
+
 gpg --full-generate-key
 gpg --list-secret-keys --keyid-format LONG
 gpg --armor --export <key>
@@ -36,35 +44,29 @@ git config --global user.email "User Email"
 brew install --HEAD neovim
 ```
 
-## ZSH
+## ZSH tooling
 ```
-brew install zsh
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-```
-      
-## FZF
-```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+brew install antigen
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## Vifm
+## Search tooling
+```
+brew install rg
+brew install fd
+
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+```
+
+## Terminal file manager
 ```
 brew install vifm
 ```
 
-## Iterm2
+## Tmux
 ```
-brew cask install iterm2
-```
-
-## Karabiner
-```
-brew install --cask karabiner-elements
-```
-
-## Tmux plugin manager
-```
+brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
@@ -83,4 +85,28 @@ brew install --cask font-hack-nerd-font
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 ```
 
-## Jenv
+## Java
+```
+brew install java11
+sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+
+brew install jenv
+jenv doctor
+jenv add /Library/Java/JavaVirtualMachines/<version>/Contents/Home
+```
+
+## Firefox driver
+```
+brew install geckodriver
+```
+
+## Smart CD
+```
+brew install zoxide
+```
+
+## Cheatset
+```
+brew install cheat
+```
+
