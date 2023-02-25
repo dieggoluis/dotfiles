@@ -36,7 +36,9 @@
   conflictstyle = diff3
 [diff]
   colorMoved = default
-[include]
-	path = ~/.workgitconfig
+[includeIf "gitdir:~/dev/pers/"]
+  path = ~/.gitconfig.pers
+[includeIf "gitdir:~/dev/nu/"]
+  path = ~/.gitconfig.work
 [push]
 	default = current
