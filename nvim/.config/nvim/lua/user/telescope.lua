@@ -22,6 +22,7 @@ telescope.setup {
 telescope.load_extension("ui-select")
 
 Keymap("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>")
+-- required ripgrep
 Keymap("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>")
 Keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>")
 Keymap("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<CR>")

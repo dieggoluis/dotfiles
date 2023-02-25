@@ -43,7 +43,6 @@ return packer.startup(function(use)
 
   -- Colorscheme
   use "folke/tokyonight.nvim"
-  use "lunarvim/colorschemes"
 
   -- Easy navigation between vim and tmux
   use "christoomey/vim-tmux-navigator"
@@ -75,7 +74,13 @@ return packer.startup(function(use)
   }
 
   -- Commenter
-  use "preservim/nerdcommenter"
+  
+  use {
+    "numToStr/Comment.nvim",
+    config = function()
+        require('Comment').setup()
+    end
+  }
 
   -- Highligh yanking
   use "machakann/vim-highlightedyank"
