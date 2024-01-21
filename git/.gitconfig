@@ -37,6 +37,8 @@
 [diff]
   colorMoved = default
 [include]
-	path = ~/.workgitconfig
+	path = ~/.gitconfig.perso
+[include]
+	path = ~/.gitconfig.work
 [push]
 	default = current
