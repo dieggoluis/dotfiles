@@ -38,6 +38,9 @@ alias rm='rm -i'
 alias zshconf="nvim ~/.zshrc"
 alias tmuxconf="nvim ~/.tmux.conf"
 
+alias uuidgen='uuidgen | tr A-F a-f'
+alias fdate='date "+%Y-%m-%dT%H:%M:%SZ"'
+
 # python managed by pyenv and homebrew do not live well together
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 

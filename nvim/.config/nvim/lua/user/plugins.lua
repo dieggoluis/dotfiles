@@ -47,9 +47,6 @@ return packer.startup(function(use)
   -- Easy navigation between vim and tmux
   use "christoomey/vim-tmux-navigator"
 
-  -- Avoid messing up with layout when closing buffers
-  use "moll/vim-bbye"
-
   -- Sexp
   use {
     "guns/vim-sexp",
@@ -108,7 +105,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ':TSUpdate',
     requires = {
-      "p00f/nvim-ts-rainbow"
+      "HiPhish/rainbow-delimiters.nvim"
     }
   }
 
@@ -132,8 +129,9 @@ return packer.startup(function(use)
   }
 
   -- LSP
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
 
   -- Clojure repl tools
   use "Olical/conjure"

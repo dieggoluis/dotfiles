@@ -43,11 +43,17 @@ Keymap("n", "<cr>", ":noh<cr><cr>")
 -- Resize with arrows
 Keymap("n", "<leader><up>", ":resize +2<cr>")
 Keymap("n", "<leader><down>", ":resize -2<cr>")
-Keymap("n", "<leader><left>", ":vertical resize -2<cr>")
-Keymap("n", "<leader><right>", ":vertical resize +2<cr>")
+Keymap("n", "<leader><left>", ":vertical resize +2<cr>")
+Keymap("n", "<leader><right>", ":vertical resize -2<cr>")
 
 -- Save
 Keymap("n", "<leader>w", ":w<cr>")
 
 -- Scape from terminal normal model
 Keymap("t", "<esc><esc>", "<c-\\><c-n>")
+
+-- Previous buffer
+Keymap("n", "<leader>b", ":b#<cr>")
+
+-- Close buffer
+Keymap("n", "<leader>q", ":bdelete<cr>")

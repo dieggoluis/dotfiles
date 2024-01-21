@@ -6,4 +6,10 @@ end
 
 Keymap("n", "<leader>tt", ":NvimTreeToggle<CR>")
 
-tree.setup {}
+tree.setup {
+  actions = {
+    open_file = {
+      resize_window = false
+    }
+  }
+}
