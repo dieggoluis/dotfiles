@@ -104,5 +104,9 @@ _evalcache zoxide init zsh
 # Clojure repl
 export LEIN_USE_BOOTCLASSPATH=no
 
+# ruby gem
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # work specific configs
 [ -f $HOME/.workrc ] && source $HOME/.workrc

@@ -6,7 +6,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.cursorline = true
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
@@ -20,6 +20,8 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.completeopt = { "menuone", "noselect" }
+vim.opt.virtualedit = "block"
+-- vim.opt.scrolloff = 999
 
 -- Remap space as leader key
 Keymap("", "<Space>", "<Nop>")
@@ -41,10 +43,10 @@ Keymap("n", "<s-tab>", ":bprevious<cr>")
 Keymap("n", "<cr>", ":noh<cr><cr>")
 
 -- Resize with arrows
-Keymap("n", "<leader><up>", ":resize +2<cr>")
-Keymap("n", "<leader><down>", ":resize -2<cr>")
-Keymap("n", "<leader><left>", ":vertical resize +2<cr>")
-Keymap("n", "<leader><right>", ":vertical resize -2<cr>")
+Keymap("n", "<leader><s-k>", ":resize +2<cr>")
+Keymap("n", "<leader><s-j>", ":resize -2<cr>")
+Keymap("n", "<leader><s-h>", ":vertical resize -2<cr>")
+Keymap("n", "<leader><s-l>", ":vertical resize +2<cr>")
 
 -- Save
 Keymap("n", "<leader>w", ":w<cr>")
@@ -57,3 +59,8 @@ Keymap("n", "<leader>b", ":b#<cr>")
 
 -- Close buffer
 Keymap("n", "<leader>q", ":bdelete<cr>")
+
+
+-- Delete, not cut
+Keymap("n", "<leader>d", "\"_d")
+Keymap("v", "<leader>d", "\"_d")

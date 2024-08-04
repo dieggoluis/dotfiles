@@ -42,7 +42,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
 
   -- Colorscheme
-  use "folke/tokyonight.nvim"
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Easy navigation between vim and tmux
   use "christoomey/vim-tmux-navigator"
@@ -122,9 +122,23 @@ return packer.startup(function(use)
   -- Lualine
   use {
     "nvim-lualine/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
-      require("lualine").setup()
+      require("lualine").setup {
+        options = {
+          icons_enabled = true,
+          theme = 'catppuccin',
+        }
+      }
+    end
+  }
+
+  -- motion navigation
+  use {
+    "ggandor/leap.nvim",
+    requires = {"tpope/vim-repeat"},
+    config = function ()
+      require("leap").create_default_mappings()
     end
   }
 
@@ -135,6 +149,15 @@ return packer.startup(function(use)
 
   -- Clojure repl tools
   use "Olical/conjure"
+
+  -- Launch repl
+  use {
+    "clojure-vim/vim-jack-in",
+    requires = {
+      "tpope/vim-dispatch",
+      "radenling/vim-dispatch-neovim"
+    }
+  }
 
   -- Colorize text with ANSI escape sequences
   use "m00qek/baleia.nvim"
