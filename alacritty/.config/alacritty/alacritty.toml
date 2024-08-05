@@ -1,0 +1,23 @@
+live_config_reload = true
+
+import = ["~/dev/alacritty-theme/themes/nord.toml"]
+
+[env]
+TERM = "alacritty"
+
+[font.normal]
+style = "Regular"
+
+[font]
+size = 10
+
+[shell]
+program = "/usr/bin/tmux"
+
+[window]
+dynamic_padding = true
+opacity = 1
+
+[window.padding]
+x = 3
+y = 0
