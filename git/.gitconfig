@@ -32,8 +32,9 @@
   diffFilter = delta --color-only
 [delta]
   navigate = true  # use n and N to move between diff sections
+  dark = true
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 [diff]
   colorMoved = default
 [include]
@@ -42,3 +43,19 @@
 	path = ~/.gitconfig.work
 [push]
 	default = current
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[help]
+	autocorrect = prompt
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[pull]
+	rebase = true
