@@ -1,22 +1,128 @@
-live_config_reload = true
-
+[general]
 import = ["~/dev/alacritty-theme/themes/nord.toml"]
+live_config_reload = true
 
 [env]
 TERM = "alacritty"
 
+[terminal.shell]
+program = "/usr/bin/tmux"
+
+[font]
+size = 10.0
+
 [font.normal]
 style = "Regular"
 
-[font]
-size = 10
+[[keyboard.bindings]]
+action = "ToggleSimpleFullscreen"
+key = "F"
+mods = "Control"
 
-[shell]
-program = "/usr/bin/tmux"
+[[keyboard.bindings]]
+chars = "\u0002,"
+key = "Comma"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00021"
+key = "Key1"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00022"
+key = "Key2"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00023"
+key = "Key3"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00024"
+key = "Key4"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00025"
+key = "Key5"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00026"
+key = "Key6"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00027"
+key = "Key7"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00028"
+key = "Key8"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u00029"
+key = "Key9"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002l"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002%"
+key = "\\"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002\""
+key = "-"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002:"
+key = "Semicolon"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002c"
+key = "T"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002x"
+key = "W"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002w"
+key = "S"
+mods = "Control"
+
+
+[[keyboard.bindings]]
+chars = "\u0002z"
+key = "Z"
+mods = "Control"
+
+#[[keyboard.bindings]]
+#chars = "\u0002r"
+#key = "R"
+#mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002["
+key = "Escape"
+mods = "Control"
 
 [window]
-dynamic_padding = true
 opacity = 1
+dynamic_padding = true
 
 [window.padding]
 x = 3
