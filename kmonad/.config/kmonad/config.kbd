@@ -18,16 +18,22 @@
 )
 
 (defalias
-  nav (tap-hold-next-release 200 spc (layer-toggle nav))
-  ces (tap-next esc lctl))
+  nav  (tap-hold-next-release 200 spc (layer-toggle nav))
+  ces  (tap-next esc lctl)
+  act  (tap-hold-next-release 200 a lctl)
+  dct  (tap-hold-next-release 200 d lctl)
+  fsf  (tap-hold-next-release 200 f lsft)
+  smct (tap-hold-next-release 200 ; rctl)
+  kct  (tap-hold-next-release 200 k rctl)
+  jsf  (tap-hold-next-release 200 j rsft))
 
 (deflayer main
   _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  @ces _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  lalt _    lctl           @nav           _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _     _    _    _
+  _    _    _    _    _    _    _    _    _    _    _     _    _    _
+  @ces _    _    @dct @fsf _    _    @jsf @kct _    _     _    _
+  _    _    _    _    _    _    _    _    _    _    _     _    _
+  lalt _    lctl           @nav           _    _    _     _    _
 )
 
 (deflayer nav
