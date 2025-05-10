@@ -3,3 +3,4 @@ vifm/.config/vifm/vifminfo.json
 vifm/.config/vifm/vifm-help.txt
 nvim/.config/nvim/plugin/packer_compiled.lua
 git/.config/git/config.perso
+tmux/.config/tmux/plugins
